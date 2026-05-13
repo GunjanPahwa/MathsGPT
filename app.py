@@ -29,7 +29,6 @@ Answer:
 prompt_template = PromptTemplate(input_variables=["question"], template=prompt)
 chain = prompt_template | llm | StrOutputParser()
 
-# ✅ Tools defined with @tool decorator
 @tool
 def wikipedia_search(query: str) -> str:
     """A tool for searching information on any topic."""
